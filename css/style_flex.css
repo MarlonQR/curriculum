@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+}
+
+.container {
+    width: 95%;
+    border: 5px solid#000;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(217, 255, 47);
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+}
+
+.element {
+    background-color: rgb(241, 155, 42);
+    height: 50px;
+    width: 20%;
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid#000;
+    margin: 5px;
+    text-align: center;
+}
+
+#one {
+    background-color: blue;
+    order: 3;
+}
+
+#two {
+    background-color: rgb(124, 255, 2);
+    order: 1;
+}
+
+#three {
+    background-color: cyan;
+    order: 2;
+}
