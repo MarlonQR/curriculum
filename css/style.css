@@ -129,3 +129,51 @@ a{
     border-radius: 5px;
     box-shadow: 0 8px 12px rgba(97, 31, 31, 0.46);
 }
+
+/*XXXXXXXXXXXXXXXX SECCION EDUCACION XXXXXXXXXXXXXXXXXX */
+.title{
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.educacion{
+    background-color: antiquewhite;
+}
+
+.content-educacion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 500px;
+    justify-content: space-around;
+
+}
+.articulo{
+    width: 30%;
+    background-color: #fff;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: all ease-in-out .5s;
+    
+}
+.articulo:hover{
+    box-shadow: 0 4px 10px rgb(17,29,48);
+    color: #fff;
+    background-color: #d03d3d;
+    transition: .5s;
+}
+.articulo > h3{
+    font-size: 24px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+}
+.articulo > a{
+    text-decoration: none;
+    color: #000;
+}
+.articulo > a:hover{
+    color: #fff;
+    transition: .5s;
+}
