@@ -336,7 +336,7 @@ a{
 
 /* ################################## MEDIA QUERYS ################################## */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     h1{
         font-size: 25px;
     }
@@ -376,7 +376,7 @@ a{
 
     .enlaces-header{
         position: fixed;
-        background-color:var(--color);
+        background-color: #565759;
         top: 0;
         right: 0;
         width: 100%;
@@ -384,17 +384,17 @@ a{
         display: flex;
         align-items: center;
         flex-direction: column;
-        clip-path: circle(0.0% at 0 0);
+        clip-path: circle(0.0% at 0% 0%);
 
     }
     
     .nav .hamburgueropen{
-        clip-path: circle(150.0% at 0 0);
+        clip-path: circle(150.0% at 0% 0%);
     }
 
     .nav .enlaces-header a{
-        color: #fff;
-        background-color: #cf6c6c;
+        color: #000;
+        background-color: #fff;
         text-transform: uppercase;
         font-weight: 800;
         margin-top: 20px;
