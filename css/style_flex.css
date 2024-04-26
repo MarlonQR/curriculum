@@ -5,6 +5,7 @@
 
 body {
     padding: 10px;
+    background-color: chartreuse;   
 }
 
 .container {
@@ -45,4 +46,13 @@ body {
 #three {
     background-color: cyan;
     order: 2;
+}
+@media screen and (max-width: 800px){
+    body{
+        background-color: rgb(42, 0, 229);
+
+    }
+    .element{
+        border: 5px solid #fd5ef0;
+    }
 }
