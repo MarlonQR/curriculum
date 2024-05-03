@@ -80,12 +80,13 @@ a{
     z-index: 100;
     cursor: pointer;
     transition: color .5s ease-in;
+    
 }
 
 .hamburguer > i{
     font-size: 25px;
     line-height: 80px;
-    color: #2a6df1;
+    
 }
 
 .titulospro{
