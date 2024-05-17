@@ -52,41 +52,85 @@ function load_page() {
         showConfirmButton: false,
         timer: 2000
     });
-    document.getElementById("text").innerText = "el array a calcular es" + array_num;
+    document.getElementById("text").innerText = "el array a calcular es " + array_num;
     document.getElementById("impresion").value = array_num;
+    document.getElementById("name_search").value = nombre_form;
+
+
+    let hour_system = new Date();
+    let dia = hour_system.getDay();
+
+    console.log(hour_system.getDate());
+    console.log("Dia "+ hour_system.getDay());
+    console.log(hour_system.getFullYear());
+    console.log(hour_system.getHours());
+    console.log(hour_system.getMilliseconds());
+    console.log(hour_system.getMonth());
+    console.log(hour_system.getSeconds());
+    console.log(hour_system.getTime());
+
+   
+
+    let day = ["domingo","lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];
+    for(let i=0; i<day.length;i++){
+        console.log(day[dia]);
+    }
+    console.log("Hoy es: "+ day[dia]);
+
+
+    let day_month = hour_system.getMonth()+1;
+    console.log(hour_system.getDay()+"/"+hour_system.getMonth()+"/"+hour_system.getFullYear());
+
+    document.getElementById("hour_system").value = hour_system;
+    
+    
 
 }
 
 function send_form() {
+
     let name = document.getElementById("name").value;
     let last_name = document.getElementById("last_name").value;
+    let pass_one = document.getElementById("pass_one").value;
+    let pass_two = document.getElementById("pass_two").value;
+    
 
-    if (name.length == 0 || last_name.length == 0) {
+    if (name.length == 0 || last_name.length == 0|| pass_one.length == 0|| pass_two.length == 0) {
         Swal.fire({
             title: "Cajas de texto vacias",
             text: "Alguna de las cajas de texto estan vacias",
             icon: "error"
         });
-        if (name.length == 0) {
-            document.getElementById("name").style.border = "2px solid red"
-        }
-        else {
-            document.getElementById("name").style.border = "2px solid green"
-        }
-        if (last_name.length == 0) {
-            document.getElementById("last_name").style.border = "2px solid red"
-        }
-        else {
-            document.getElementById("last_name").style.border = "2px solid green"
-        }
 
+        // if (name.length == 0) {
+        //     document.getElementById("name").style.border = "2px solid red"
+        // }
+        // else {
+        //     document.getElementById("name").style.border = "2px solid green"
+        // }
+        // if (last_name.length == 0) {
+        //     document.getElementById("last_name").style.border = "2px solid red"
+        // }
+        // else {
+        //     document.getElementById("last_name").style.border = "2px solid green"
+        // }
+    }else if(pass_one != pass_two){
+        Swal.fire({
+            title: "Sus contraseñas no son iguales ",
+            text: "Por favor valide sus credenciales",
+            icon: "error"
+        });
     }
     else {
         document.getElementById("print").innerText = "Su nombre es " + name + "   " + last_name;
+        console.log(isNaN(name));
+        
 
     }
 
 }
+
+
 
 
 //ARRAYS
@@ -153,10 +197,16 @@ var array_numerico = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function agregar() {
     let num = document.getElementById("num").value;
-    let array_add = array_numerico.push(num);
-    console.log(array_add);
-    console.log(array_numerico);
-    document.getElementById("impresion").value = array_numerico
+    if(isNaN(num) == true){
+        Swal.fire("Solo se se aceptan numeros")
+
+    }else{
+        let array_add = array_numerico.push(num);
+        console.log(array_add);
+        console.log(array_numerico);
+        document.getElementById("impresion").value = array_numerico
+    }
+    
 }
 function eliminar() {
     let = array_delete = array_numerico.pop();
@@ -184,4 +234,38 @@ function limpiar() {
 function eliminarprim(){
     let array_delete = array_numerico.shift();
     document.getElementById("impresion").value=array_numerico;
+}
+
+
+
+var nombre_form = "Wilder Andres Duarte Neira";
+
+function search(){
+    let nombre_buscar = document.getElementById("name_search").value;
+    // alert(nombre_buscar);
+    Swal.fire(nombre_buscar.toLowerCase());
+    // Swal.fire({
+    //     title: nombre_buscar.toLowerCase(),
+    //     text:"Alguna de las cajas de texto se encuentra vacia",
+    //     icon:"error"
+    // })
+
+  
+
+    // Swal.fire(nombre_buscar.charAt(0));
+    
+    // let word =(nombre_buscar.indexOf('e'));
+    // let word = nombre_buscar.lastIndex('e');
+    // let word = nombre_buscar.substring(5,15);
+    let word = nombre_buscar.split("");
+    Swal.fire(word+"");
+
+    let word_com = word.join("");
+    console.log(word_com);
+
+    
+
+    
+
+
 }
