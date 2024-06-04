@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ESTILOS DE CSS -->
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .container{
+            height: 600px;
+            width: 400px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            box-shadow: 0 0 10px gray;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .numeros{
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            width: 400px;
+            border-radius: 20px;
+            border: 2px solid red;
+            box-shadow: 0 0 10px red;
+            gap: 50px;
+            padding: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ETIQUETAS HTML -->
+    <div class="container">
+        <div class="row">
+            <input type="number" id="caja_uno">
+            <input type="number" id="caja_dos">
+        </div>
+
+        <h3>ZONA DE IMPRESION</h3>
+        <div id="print_name"></div>
+        <label id="cant"></label>
+        <div id="print"></div>
+        <button onclick="enviar()">ENVIAR</button>
+
+    </div>
+    <div class="numeros">
+        <div id="pares">
+            <h3>PARES</h3>
+            <div id="numberpar"></div>
+        </div>
+        <div id="impares">
+            <h3>IMPARES</h3>
+            <div id="numberimpar"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        // function enviar(){
+        //     let caja_uno = document.getElementById("caja_uno").value.trim();
+        //     let caja_dos = document.getElementById("caja_dos").value.trim();
+
+
+        //     let cadena1= "";
+        //     let cadena2 = "";
+
+        //     for(i= caja_uno; i<= caja_dos; i++){
+        //         if(i%2==0){
+        //             cadena1 += i + " Es par" + "\n";
+        //         }else{
+        //             cadena2 += i +" Es impar "+ "\n";
+        //         }
+        //         document.getElementById("numberpar").innerText = cadena1 ;
+        //         document.getElementById("numberimpar").innerText = cadena2 ;
+        //     }
+        // }
+    </script>
+</body>
+</html>

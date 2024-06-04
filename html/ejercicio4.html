@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ESTILOS DE CSS -->
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .container{
+            height: 600px;
+            width: 400px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            box-shadow: 0 0 10px gray;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ETIQUETAS HTML -->
+    <div class="container">
+        <div class="row">
+            <input type="text" id="caja_uno">
+            <input type="text" id="caja_dos">
+            <input type="text" id="caja_tres">
+            <input type="text" id="caja_cuatro">
+        </div>
+
+        <h3>ZONA DE IMPRESION</h3>
+        <div id="print_name"></div>
+        <label id="cant"></label>
+        <div id="print"></div>
+        <button onclick="enviar()">ENVIAR</button>
+    </div>
+    <script>
+        function enviar(){ 
+            let caja_uno = document.getElementById("caja_uno").value.trim();
+            let caja_dos = document.getElementById("caja_dos").value.trim();
+            let caja_tres = document.getElementById("caja_tres").value.trim();
+            let caja_cuatro= document.getElementById("caja_cuatro").value.trim();
+            let concat = caja_uno + caja_dos + caja_tres +caja_cuatro;
+
+            document.getElementById("print_name").innerText = caja_uno.toUpperCase() +" "+ caja_dos.toUpperCase() +" "+ caja_tres.toUpperCase()+" "+ caja_cuatro.toUpperCase();
+            document.getElementById("cant").innerText = "Tiene "+ concat.length + " caracteres";
+
+
+            let cadena ="";
+            let letra = "";
+            for(let i=0; i<=concat.length; i++){
+                letra = concat.charAt(i);
+                cadena += letra + " " +(i+1) + "\n";
+                document.getElementById("print").innerText = cadena;
+
+            }
+            
+        }
+    </script>
+</body>
+</html>
